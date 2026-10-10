@@ -16,4 +16,6 @@
     <dimen name="font_nama_cursive">30sp</dimen>
     <dimen name="font_detail">16sp</dimen>
     <dimen name="font_footer">14sp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="header_spacing">8dp</dimen>
 </resources>

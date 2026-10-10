@@ -1,10 +1,6 @@
 package com.example.day3praktugas
 
+import androidx.compose.ui.text.font.FontFamily
+import androidx.annotation.ColorRes
 import androidx.annotation.DimenRes
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.res.dimensionResource
-import androidx.compose.ui.unit.TextUnit
-import androidx.compose.ui.unit.sp
-
-@Composable
-private fun spResource(@DimenRes id: Int): TextUnit = dimensionResource(id).value.sp
+import androidx.annotation.StringRes

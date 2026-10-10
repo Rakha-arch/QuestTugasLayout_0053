@@ -1,4 +1,4 @@
-package com.example.day3praktugas
+package com.example.day3praktugas // Sesuaikan dengan package project Anda
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,11 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.day3praktugas.ui.theme.Day3praktugasTheme
+import com.example.day3praktugas.ui.theme.Day3praktugasTheme // Sesuaikan dengan nama theme Anda
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,29 +16,13 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Day3praktugasTheme {
-                Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    // Memanggil fungsi utama tampilan kartu profil Anda
+                    ActivitasPertama(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Day3praktugasTheme {
-        Greeting("Android")
     }
 }

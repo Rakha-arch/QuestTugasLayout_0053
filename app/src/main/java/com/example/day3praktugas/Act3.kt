@@ -30,3 +30,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+@Composable
+private fun spResource(@DimenRes id: Int): TextUnit = dimensionResource(id).value.sp

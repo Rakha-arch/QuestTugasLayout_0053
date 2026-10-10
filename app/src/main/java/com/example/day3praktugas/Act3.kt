@@ -53,4 +53,10 @@ fun KartuProfil(
         shape = RoundedCornerShape(dimensionResource(R.dimen.radius_kartu)),
         colors = CardDefaults.cardColors(containerColor = colorResource(warnaKartu))
     ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            LogoUmy()
+    }
 }

@@ -58,12 +58,133 @@ fun KartuProfil(
             verticalAlignment = Alignment.CenterVertically
         ) {
             LogoUmy()
-
             Column(
                 modifier = Modifier
                     .weight(1f)
                     .padding(horizontal = dimensionResource(R.dimen.jarak_konten)),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                Text(
+                    text = stringResource(nama),
+                    fontSize = spResource(ukuranNama),
+                    fontFamily = fontNama,
+                    fontWeight = bobotNama,
+                    color = colorResource(R.color.teks_nama),
+                    textAlign = TextAlign.Center
+                )
+                if (telepon != null) {
+                    Text(
+                        text = stringResource(telepon),
+                        fontSize = spResource(R.dimen.font_detail),
+                        fontFamily = FontFamily.Serif,
+                        color = colorResource(R.color.teks_telp),
+                        modifier = Modifier.padding(top = dimensionResource(R.dimen.jarak_teks)),
+                        textAlign = TextAlign.Center
+                    )
+                }
+                Text(
+                    text = stringResource(alamat),
+                    fontSize = spResource(R.dimen.font_detail),
+                    fontFamily = FontFamily.Serif,
+                    color = colorResource(warnaAlamat),
+                    modifier = Modifier.padding(top = dimensionResource(R.dimen.jarak_teks)),
+                    textAlign = TextAlign.Center
+                )
+            }
+            LogoUmy()
+        }
+    }
+}
+
+@Composable
+private fun LogoUmy() {
+    Image(
+        painter = painterResource(R.drawable.logoumy),
+        contentDescription = stringResource(R.string.desc_logo),
+        modifier = Modifier
+            .size(dimensionResource(R.dimen.ukuran_logo))
+            .padding(dimensionResource(R.dimen.padding_logo))
+    )
+}
+
+@Composable
+fun ActivitasPertama(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .padding(top = dimensionResource(R.dimen.padding_atas_layar))
+    ) {
+        // Large background logo UMY
+        Image(
+            painter = painterResource(R.drawable.logoumy),
+            contentDescription = null,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(24.dp),
+            alignment = Alignment.Center,
+            alpha = 0.35f
+        )
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = stringResource(R.string.prodi),
+                fontSize = spResource(R.dimen.font_prodi),
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Serif,
+                textAlign = TextAlign.Center
+            )
+            Text(
+                text = stringResource(R.string.univ),
+                fontSize = spResource(R.dimen.font_univ),
+                fontFamily = FontFamily.Serif,
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.jarak_judul)))
+
+            KartuProfil(
+                nama = R.string.nama_1,
+                telepon = R.string.telp_1,
+                alamat = R.string.alamat_1,
+                warnaKartu = R.color.card_0_bg,
+                warnaAlamat = R.color.teks_alamat_kuning
+            )
+            KartuProfil(
+                nama = R.string.nama_2,
+                telepon = R.string.telp_2,
+                alamat = R.string.alamat_2,
+                warnaKartu = R.color.card_1_bg,
+                warnaAlamat = R.color.teks_alamat_kuning
+            )
+            KartuProfil(
+                nama = R.string.nama_3,
+                telepon = R.string.telp_3,
+                alamat = R.string.alamat_3,
+                warnaKartu = R.color.card_2_bg,
+                warnaAlamat = R.color.teks_alamat_putih
+            )
+            KartuProfil(
+                nama = R.string.nama_4,
+                telepon = R.string.telp_4,
+                alamat = R.string.alamat_4,
+                warnaKartu = R.color.card_3_bg,
+                warnaAlamat = R.color.teks_alamat_putih
+            )
+
+            Spacer(modifier = Modifier.weight(1f))
+
+            Text(
+                text = stringResource(R.string.copy),
+                fontSize = spResource(R.dimen.font_footer),
+                fontFamily = FontFamily.Serif,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_footer))
+            )
+        }
     }
 }

@@ -4,6 +4,7 @@
     <string name="univ">Universitas Muhammadiyah Yogyakarta</string>
     <string name="copy">Copyright, 2026</string>
     <string name="desc_logo">Logo Universitas Muhammadiyah Yogyakarta</string>
+    <string name="author_credit">Developed with Jetpack Compose</string>
 
     <string name="nama_1">faiz wawans</string>
     <string name="telp_1">081728912151</string>

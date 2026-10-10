@@ -33,3 +33,16 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 private fun spResource(@DimenRes id: Int): TextUnit = dimensionResource(id).value.sp
+
+@Composable
+fun KartuProfil(
+    @StringRes nama: Int,
+    @StringRes alamat: Int,
+    @ColorRes warnaKartu: Int,
+    @ColorRes warnaAlamat: Int,
+    modifier: Modifier = Modifier,
+    @StringRes telepon: Int? = null,
+    @DimenRes ukuranNama: Int = R.dimen.font_nama,
+    fontNama: FontFamily = FontFamily.Serif,
+    bobotNama: FontWeight = FontWeight.Bold
+) {
